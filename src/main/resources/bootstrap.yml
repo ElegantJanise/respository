@@ -1,0 +1,32 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: hp-canteen-server
+
+  profiles:
+    active: dev
+
+
+mybatis-plus:
+  # MyBatis Mapper所对应的XML文件位置
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  global-config:
+    # 关闭MP3.0自带的banner
+    banner: false
+    db-config:
+      # 默认数据库表下划线命名
+      table-underline: true
+      # 逻辑删除配置
+      # 逻辑删除全局值（1表示已删除，这也是Mybatis Plus的默认配置）
+      logic-delete-value: 1
+      # 逻辑未删除全局值（0表示未删除，这也是Mybatis Plus的默认配置）
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+# Logger Config
+logging:
+  level:
+    com.yiciyuan.canteen.mapper: debug

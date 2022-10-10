@@ -1,0 +1,19 @@
+server:
+  port: 7701
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: com.zaxxer.hikari.HikariDataSource
+#    url: jdbc:mysql://localhost:3306/canteen?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://192.168.0.66:3306/canteen?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+
+
+# minio 文件存储配置信息
+#minio:
+#  endpoint: http://127.0.0.1:9000
+#  accesskey: minioadmin
+#  secretKey: minioadmin
+#  name: test
